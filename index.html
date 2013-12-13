@@ -36,8 +36,225 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+				<!-- Front slide -->
 				<section>
 					<h1>Desafios de se criar um jogo em HTML5</h1>
+					<p>Mailson Menezes</p>
+                    <p>openBossa @ <a href="http://www.indt.org/">INdT</a></p>
+					<!-- TODO: Insert link to the presentation  -->
+				</section>
+
+				<!-- About -->
+				<section>
+					<section>
+						<h2>Quem sou</h2>
+						<p class="author">Mailson Menezes</p>
+						<p><a href="http://blog.mailson.org/">blog.mailson.org</a> / <a href="http://www.twitter.com/omailson/">@omailson</a> / <a href="http://github.com/omailson/">github.com/omailson</a></p>
+						<img src="images/indt_en_white.png" style="border: 0; background: none; box-shadow: none; width: 30%"/>
+					</section>
+					<section>
+						<p>Desenvolvimento da versão HTML5 do <a href="http://circus.indt.org">Incredible Circus</a>.</p>
+						<img src="images/circus.jpg" />
+						<p>Jogue no <a href="https://apps.facebook.com/incrediblecircus" target="_blank">Facebook</a></p>
+						<p>Também disponível para <a href="http://goo.gl/uqKsrr">iOS</a>, <a href="http://goo.gl/H5TRvP">Android</a> e <a href="http://goo.gl/3VIjdi">Windows Phone</a></p>
+					</section>
+				</section>
+
+				<!-- About the talk -->
+				<section>
+					<h2>Sobre a palestra</h2>
+					<!-- TODO: Citar os topicos da palestra -->
+					<!-- TODO: Link para a palestra -->
+				</section>
+
+				<!-- Circus -->
+				<section>
+					<section>
+						<h2>The Incredible Circus</h2>
+					</section>
+					<section>
+						<h3>Situação</h3>
+						<ul>
+							<li>Versão nativa em C++</li>
+							<li>Outra versão em C#</li>
+							<li>Port para uma versão HTML5</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Problemas iniciais</h3>
+						<!-- TODO: Colocar em sections diferentes -->
+						<ul>
+							<li>Não tínhamos mais tanto controle sobre a plataforma</li>
+							<li>Preocupação que a performance do jogo não fosse satisfatória</li>
+							<li>Experiência do time</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Web Apps</h2>
+				</section>
+
+				<section>
+					<h2>Por que só agora?</h2>
+					<ul>
+						<li>Canvas</li>
+						<li>WebAudio</li>
+						<li>Performance dos browsers</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Canvas</h2>
+						<p>Elemento HTML de pintura</p>
+						<p>Suporte 2D (canvas2d) e 3D (WebGL)</p>
+						<!-- TODO: Canvas HTML definition -->
+					</section>
+					<section>
+						<h3>Canvas 2D</h3>
+                        <ul>
+							<!-- TODO: pintura de primitivas, pintura de imagens, composição, transformação -->
+                            <li>arc</li>
+                            <li>bezierCurve</li>
+                            <li>lineTo</li>
+                            <li>quadraticCurve</li>
+                            <li>stroke</li>
+                            <li>fillText</li>
+							<li>transform</li>
+                        </ul>
+					</section>
+					<section>
+						<h3>Canvas 2D</h3>
+						<p>Acesso via JavaScript</p>
+						<!-- TODO: Acessa o context e desenha algo -->
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Image</h2>
+						<p>As imagens não serão imediatamente exibidas, serão desenhadas</p>
+					</section>
+					<section>
+						<h3>Criando uma imagem</h3>
+						<!-- TODO: Codigo de uma imagem sendo criada -->
+					</section>
+					<section>
+						<h3>Desenhando no canvas</h3>
+						<!-- TODO: drawImage simples -->
+					</section>
+					<section>
+						<h3>Desenhando no canvas</h3>
+						<!-- TODO: drawImage com clipagem -->
+					</section>
+					<section>
+						<h3>Desenhando no canvas</h3>
+						<p>Útil para o uso de spritesheets</p>
+						<!-- TODO: Um sprite sheet -->
+						<!-- TODO: spritesheet melhora o carregamento -->
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Estrutura do jogo</h2>
+					</section>
+					<section>
+						<h3>Boa separação entre as camadas</h3>
+						<p>Cada elemento do jogo tem uma representação nas 3 camadas principais (core, physics e UI)</p>
+					</section>
+					<section>
+						<h3>Main loop</h3>
+						<p>Chamar o update do jogo em um intervalo fixo de tempo</p>
+					</section>
+					<section>
+						<h3>Main loop</h3>
+						<p>setInterval</p>
+						<!-- TODO: codigo setInterval -->
+						<p>Não temos muito controle sobre o loop do jogo</p>
+					</section>
+					<section>
+						<h3>Main loop</h3>
+						<p>setTimeout</p>
+						<!-- TODO: codigo setTimeout -->
+					</section>
+					<section>
+						<h3>Main loop</h3>
+						<p>requestAnimationFrame</p>
+						<!-- TODO: codigo requestAnimationFrame -->
+						<p>O navegador que dá o tick do jogo</p>
+						<p>A frequencia é menor quando a janela está inativa</p>
+						<!-- TODO: link artigo requestAnimationFrame -->
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Bibliotecas</h2>
+						<!-- TODO: armazenamento: localStorage, IndexedDB, cookie -->
+						<!-- TODO: event listener: diferença webkit/microsoft -->
+						<p>Útil para manter a sanidade</p>
+					</section>
+					<section>
+						<h2>Bibliotecas</h2>
+						<p>Tratar como se você fosse trocar de biblioteca no futuro</p>
+						<p>Às vezes você descobre no meio do projeto que a biblioteca não é suficiente</p>
+					</section>
+					<section>
+						<h2>Bibliotecas</h2>
+						<p>Decidimos não usar jQuery</p>
+						<!-- TODO: dizer o porque -->
+					</section>
+					<section>
+						<h3>Storage</h3>
+						<!-- TODO: lawnchar -->
+					</section>
+					<section>
+						<h3>WebAudio</h3>
+						<!-- TODO: webaudio lib -->
+					</section>
+					<section>
+						<h3>Touch</h3>
+						<!-- TODO: hammer, touchy -->
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>JavaScript</h2>
+					</section>
+
+					<section>
+						<h3>JavaScript OO</h3>
+						<!-- TODO: exemplo de definição de classe -->
+						<!-- TODO: link da MDN e john resig -->
+					</section>
+
+					<section>
+						<h3>Testes automáticos</h3>
+						<p>Não muito usado em games, mas bastante útil</p>
+						<!-- TODO: link unit tests com games -->
+					</section>
+
+					<section>
+						<h3>Documentação com geração de API</h3>
+						<p>Melhora o reuso dos componentes</p>
+						<p>Mais fácil de identificar os tipos</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Mudanças constantes</h2>
+						<p>Browsers evoluem rapidamente</p>
+						<!-- TODO: html5 rock -->
+					</section>
+				</section>
+
+				<section>
+					<h2>Obrigado!</h2>
+					<!-- TODO: link para a palestra -->
 				</section>
 			</div>
 
