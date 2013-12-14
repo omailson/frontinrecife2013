@@ -129,27 +129,42 @@
 				<section>
 					<section>
 						<h2>Canvas</h2>
-						<p>Elemento HTML de pintura</p>
-						<p>Suporte 2D (canvas2d) e 3D (WebGL)</p>
-						<!-- TODO: Canvas HTML definition -->
+						<ul>
+							<li>Elemento HTML de pintura</li>
+							<li>Suporte 2D (canvas2d) e 3D (WebGL)</li>
+							<pre style="width: 100%"><code>&lt;canvas id="game" width="200" height="200"&gt;&lt;/canvas&gt;</code></pre>
+						</ul>
 					</section>
 					<section>
 						<h3>Canvas 2D</h3>
                         <ul>
-							<!-- TODO: pintura de primitivas, pintura de imagens, composição, transformação -->
-                            <li>arc</li>
-                            <li>bezierCurve</li>
-                            <li>lineTo</li>
-                            <li>quadraticCurve</li>
-                            <li>stroke</li>
-                            <li>fillText</li>
-							<li>transform</li>
+							<li><strong>Pintura de primitivas:</strong> arcos, curvas de Bézier, linhas, retângulos</li>
+							<li><strong>Transformação afim:</strong> rotação, translação, cisalhamento</li>
+							<li><strong>Composição:</strong> clip, blending, alpha</li>
                         </ul>
 					</section>
 					<section>
 						<h3>Canvas 2D</h3>
 						<p>Acesso via JavaScript</p>
-						<!-- TODO: Acessa o context e desenha algo -->
+                        <pre><code class="language-javascript">var canvas = document.getElementById("game");
+var context = canvas.getContext("2d");
+context.fillStyle = "#c80000"
+context.fillRect(10, 10, 55, 50);
+
+context.fillStyle = "rgba(0, 0, 200, 0.5)"
+context.fillRect(30, 30, 55, 50);</pre></code>
+                        <canvas id="canvas2" width="200" height="200" style="margin: 0px auto"></canvas>
+                        <script>
+                            var context2 = document.getElementById("canvas2").getContext("2d");
+                            context2.fillStyle = "#FFFFFF";
+                            context2.fillRect(0, 0, 200, 200);
+
+                            context2.fillStyle = "#c80000"
+                            context2.fillRect(10, 10, 55, 50);
+
+                            context2.fillStyle = "rgba(0, 0, 200, 0.5)"
+                            context2.fillRect(30, 30, 55, 50);
+                        </script>
 					</section>
 				</section>
 
