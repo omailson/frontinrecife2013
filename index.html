@@ -328,20 +328,34 @@ tick();</code></pre>
 
 					<section>
 						<h3>JavaScript OO</h3>
-						<!-- TODO: exemplo de definição de classe -->
-						<!-- TODO: link da MDN e john resig -->
+                        <pre><code class="language-javascript">var Person = function (name) {
+    this.name = name;
+};
+
+Person.prototype.sayHello = function () {
+    console.log("Hello, my name is " + this.name);
+};
+
+var p = new Person("John Doe");
+p.sayHello(); // Hello, my name is John Doe</code></pre>
+					</section>
+					<section>
+						<h3>JavaScript OO</h3>
+                        <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript">Introduction to object-oriented JavaScript</a></p>
+                        <p><a href="http://ejohn.org/blog/simple-javascript-inheritance/">Simple JavaScript inheritance</a></p>
 					</section>
 
 					<section>
 						<h3>Testes automáticos</h3>
 						<p>Não muito usado em games, mas bastante útil</p>
-						<!-- TODO: link unit tests com games -->
+						<p><a href="http://docs.busterjs.org/en/latest/">Buster.js</a></p>
 					</section>
 
 					<section>
 						<h3>Documentação com geração de API</h3>
 						<p>Melhora o reuso dos componentes</p>
 						<p>Mais fácil de identificar os tipos</p>
+						<p><a href="http://yui.github.io/yuidoc/">YUIDoc</a></p>
 					</section>
 				</section>
 
