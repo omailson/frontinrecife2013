@@ -65,7 +65,7 @@
 					<h2>Sobre a palestra</h2>
 					<ul>
 						<li>Problemas iniciais do desenvolvimento do Circus</li>
-						<li>Apresentação de features úteis</li>
+						<li>Apresentação de <em>features</em> úteis</li>
 						<li>Organização do jogo</li>
 						<li>Bibliotecas</li>
 						<li>Práticas de programação</li>
@@ -209,10 +209,15 @@ image.src = "images/smurf.png"</pre></code>
 						<h3>Desenhando uma seção da imagem</h3>
                         <pre><code>context.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);</code></pre>
                         <img src="images/drawImage.png" />
+						<aside class="note">
+							<ul>
+								<li>Às vezes é útil</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<h3>Desenhando uma seção da imagem</h3>
-						<p>Útil para o uso de spritesheets</p>
+						<p>Útil para o uso de <em>spritesheets</em></p>
                         <pre><code class="language-javascript">var image = new Image();
 image.onload = function () {
     context.drawImage(image, 0, 0, 128, 128, 30, 30, 128, 128);
@@ -242,7 +247,10 @@ image.src = "images/smurfs_sheet.png"</pre></code>
 					</section>
 					<section>
 						<h3>Boa separação entre as camadas</h3>
-						<p>Cada elemento do jogo tem uma representação nas 3 camadas principais (core, physics e UI)</p>
+						<ul>
+							<li>Cada elemento do jogo tem uma representação nas 3 camadas principais (physics, core e UI)</li>
+							<li>PlayerBody, PlayerEntity, PlayerSprite</li>
+						</ul>
 					</section>
 					<section>
 						<h3>Main loop</h3>
@@ -274,7 +282,7 @@ tick();</code></pre>
 tick();</code></pre>
 						<ul>
 							<li>O navegador que dá o tick do jogo</li>
-							<li>A frequencia é menor quando a janela está inativa</li>
+							<li>A frequência é menor quando a janela está inativa</li>
 							<li>Leia mais: <a href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for Smart Animating</a></li>
 						</ul>
 					</section>
@@ -299,7 +307,7 @@ tick();</code></pre>
 					<section>
 						<h2>Bibliotecas</h2>
 						<ul>
-							<li>Decidimios inicialmente não usar o jQuery</li>
+							<li>Decidimos inicialmente não usar o jQuery</li>
 							<li>Receio quanto à performance</li>
 							<li>Criaria uma dependência muito forte com uma biblioteca</li>
 						</ul>
@@ -329,7 +337,7 @@ tick();</code></pre>
 
 				<section>
 					<section>
-						<h2>JavaScript</h2>
+						<h2>Práticas usadas</h2>
 					</section>
 
 					<section>
@@ -353,7 +361,7 @@ p.sayHello(); // Hello, my name is John Doe</code></pre>
 
 					<section>
 						<h3>Testes automáticos</h3>
-						<p>Não muito usado em games, mas bastante útil</p>
+						<p>Não muito usado em games, mas bastante importante</p>
 						<p><a href="http://docs.busterjs.org/en/latest/">Buster.js</a></p>
 					</section>
 
