@@ -171,6 +171,11 @@ context.fillRect(30, 30, 55, 50);</pre></code>
                             context2.fillStyle = "rgba(0, 0, 200, 0.5)"
                             context2.fillRect(30, 30, 55, 50);
                         </script>
+						<aside class="notes">
+							<ul>
+								<li>Plateia deve conhecer</li>
+							</ul>
+						</aside>
 					</section>
 				</section>
 
@@ -178,6 +183,12 @@ context.fillRect(30, 30, 55, 50);</pre></code>
 					<section>
 						<h2>Image</h2>
 						<p>As imagens não serão imediatamente exibidas, serão desenhadas</p>
+						<aside class="notes">
+							<ul>
+								<li>Costume de declarar imagem a ser exibida</li>
+								<li>Inicializar e guardar</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<h3>Criando uma imagem</h3>
@@ -244,6 +255,13 @@ image.src = "images/smurfs_sheet.png"</pre></code>
 				<section>
 					<section>
 						<h2>Estrutura do jogo</h2>
+						<aside class="notes">
+							<ul>
+								<li>Falar rapidamente</li>
+								<li>Organização</li>
+								<li>Main loop</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<h3>Boa separação entre as camadas</h3>
@@ -251,6 +269,11 @@ image.src = "images/smurfs_sheet.png"</pre></code>
 							<li>Cada elemento do jogo tem uma representação nas 3 camadas principais (physics, core e UI)</li>
 							<li>PlayerBody, PlayerEntity, PlayerSprite</li>
 						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Responsabilidades de cada um</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<h3>Main loop</h3>
@@ -332,12 +355,22 @@ tick();</code></pre>
 						<h3>Touch</h3>
 						<p><a href="http://eightmedia.github.io/hammer.js/">Hammer.js</a></p>
 						<p><a href="https://github.com/jairajs89/Touchy.js">Touchy.js</a></p>
+						<aside class="notes">
+							<ul>
+								<li>Trocou de lib no meio do projeto</li>
+							</ul>
+						</aside>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Práticas usadas</h2>
+						<aside class="notes">
+							<ul>
+								<li>Algumas práticas que valem a pena mencionar</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
@@ -352,11 +385,17 @@ Person.prototype.sayHello = function () {
 
 var p = new Person("John Doe");
 p.sayHello(); // Hello, my name is John Doe</code></pre>
+						<aside class="notes">
+							Uma das formas de OO
+						</aside>
 					</section>
 					<section>
 						<h3>JavaScript OO</h3>
                         <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript">Introduction to object-oriented JavaScript</a></p>
                         <p><a href="http://ejohn.org/blog/simple-javascript-inheritance/">Simple JavaScript inheritance</a></p>
+						<aside class="notes">
+							Falar sobre os links
+						</aside>
 					</section>
 
 					<section>
@@ -378,12 +417,22 @@ p.sayHello(); // Hello, my name is John Doe</code></pre>
 						<h2>Mudanças constantes</h2>
 						<p>Browsers evoluem rapidamente</p>
 						<p><a href="http://www.html5rocks.com/en/">HTML5 Rocks</a></p>
+						<aside class="notes">
+							<ul>
+								<li>Por último</li>
+								<li>Background Canvas vs. CSS</li>
+								<li>Ninguém tem o melhor canvas</li>
+							</ul>
+						</aside>
 					</section>
 				</section>
 
 				<section>
 					<h2>Obrigado!</h2>
 					<p><a href="http://omailson.github.io/frontinrecife2013/">omailson.github.io/frontinrecife2013</a></p>
+					<aside class="notes">
+						Dúvidas?
+					</aside>
 				</section>
 			</div>
 
