@@ -175,21 +175,58 @@ context.fillRect(30, 30, 55, 50);</pre></code>
 					</section>
 					<section>
 						<h3>Criando uma imagem</h3>
-						<!-- TODO: Codigo de uma imagem sendo criada -->
+                        <pre><code class="language-javascript">var image = new Image();
+var imageLoaded = false;
+image.onload = function () {
+	imageLoaded = true;
+};
+image.src = "images/smurf.png"</pre></code>
 					</section>
 					<section>
 						<h3>Desenhando no canvas</h3>
-						<!-- TODO: drawImage simples -->
+						<pre><code class="language-javascript">if (imageLoaded)
+    context.drawImage(image, 30, 30);</code></pre>
+                        <canvas id="canvas3" width="200" height="200" style="margin: 0px auto"></canvas>
+                        <script>
+                            var context3 = document.getElementById("canvas3").getContext("2d");
+                            context3.fillStyle = "#FFFFFF";
+                            context3.fillRect(0, 0, 200, 200);
+
+                            var image = new Image();
+                            image.onload = function () {
+                                context3.drawImage(image, 30, 30);
+                            };
+                            image.src = "images/smurf.png"
+                        </script>
 					</section>
 					<section>
-						<h3>Desenhando no canvas</h3>
-						<!-- TODO: drawImage com clipagem -->
+						<h3>Desenhando uma seção da imagem</h3>
+                        <pre><code>context.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);</code></pre>
+                        <img src="images/drawImage.png" />
 					</section>
 					<section>
-						<h3>Desenhando no canvas</h3>
+						<h3>Desenhando uma seção da imagem</h3>
 						<p>Útil para o uso de spritesheets</p>
-						<!-- TODO: Um sprite sheet -->
-						<!-- TODO: spritesheet melhora o carregamento -->
+                        <pre><code class="language-javascript">var image = new Image();
+image.onload = function () {
+    context.drawImage(image, 0, 0, 128, 128, 30, 30, 128, 128);
+};
+image.src = "images/smurfs_sheet.png"</pre></code>
+                        <div style="margin: 0px auto">
+                            <img src="images/smurfs_sheet.png" style="width: 40%"/>
+                            <canvas id="canvas4" width="200" height="200" style="margin-left: 50px; margin-bottom: 100px"></canvas>
+                        <div>
+                        <script>
+                            var context4 = document.getElementById("canvas4").getContext("2d");
+                            context4.fillStyle = "#FFFFFF";
+                            context4.fillRect(0, 0, 201, 201);
+
+                            var img = new Image();
+                            img.onload = function () {
+                                context4.drawImage(img, 0, 0, 128, 128, 30, 30, 128, 128);
+                            };
+                            img.src = "images/smurfs_sheet.png"
+                        </script>
 					</section>
 				</section>
 
