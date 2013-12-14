@@ -245,21 +245,32 @@ image.src = "images/smurfs_sheet.png"</pre></code>
 					<section>
 						<h3>Main loop</h3>
 						<p>setInterval</p>
-						<!-- TODO: codigo setInterval -->
+						<pre><code class="language-javascript">function tick() { /* ... */ }
+setInterval(tick, 30);</code></pre>
 						<p>Não temos muito controle sobre o loop do jogo</p>
 					</section>
 					<section>
 						<h3>Main loop</h3>
 						<p>setTimeout</p>
-						<!-- TODO: codigo setTimeout -->
+						<pre><code class="language-javascript">function tick() {
+    /* ... */
+    setTimeout(tick, 30);
+}
+tick();</code></pre>
 					</section>
 					<section>
 						<h3>Main loop</h3>
 						<p>requestAnimationFrame</p>
-						<!-- TODO: codigo requestAnimationFrame -->
-						<p>O navegador que dá o tick do jogo</p>
-						<p>A frequencia é menor quando a janela está inativa</p>
-						<!-- TODO: link artigo requestAnimationFrame -->
+						<pre><code class="language-javascript">function tick(delta) {
+    /* ... */
+    requestAnimationFrame(tick);
+}
+tick();</code></pre>
+						<ul>
+							<li>O navegador que dá o tick do jogo</li>
+							<li>A frequencia é menor quando a janela está inativa</li>
+							<li>Leia mais: <a href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for Smart Animating</a></li>
+						</ul>
 					</section>
 				</section>
 
